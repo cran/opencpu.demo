@@ -1,0 +1,17 @@
+6d9a8ebecc99a132d11f68212ddf79af *DESCRIPTION
+52e774970f91cc8347dccc6815425c78 *NAMESPACE
+5237d72b441caf7f78f602bc9b6bc12a *R/liveplot.R
+fed7d34336720f1dce57461755564537 *R/nabel.R
+0add13cbcef14c5b38115aaedaf77569 *R/testplothandlers.R
+60db1ba0e8a8af92fba95eb4bad7b9fe *inst/files/1991GS.sav
+d782229d9f328d340d8bc892bf6a586d *inst/opencpu/apps/index.html
+06b4081f731b4063c1e53b362c609866 *inst/opencpu/apps/nabel/index.html
+992964d5a7b6be4c6b8857a90a877189 *inst/opencpu/apps/nabel/nabel.js
+0e6e0f46d7504242302bc8055ad9c8c2 *inst/opencpu/apps/nabel/spinner.gif
+61a5099943bab0d69b7316288cc15080 *inst/opencpu/apps/runcode/index.html
+ea4d46de2cd39d2f1e0aa6988a16d2c7 *inst/opencpu/apps/storefunction/index.html
+bb69dfa97b08a7e3f3e3eddc6a65026d *inst/opencpu/apps/uploadfile/index.html
+0497fa45d4efa68bd34ed049993be478 *man/liveplot.Rd
+fe64c9e7194856497e6ecf85d365230b *man/nabel.Rd
+162d618bd359eed636a72412f24a8ac1 *man/testplothandlers.Rd
+e2217f1049faad87e5335455d1dc405e *opencpu.demo-Ex.R
