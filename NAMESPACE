@@ -1,3 +1,4 @@
 export(liveplot)
+export(makefunction)
 export(nabel)
 export(testplothandlers)

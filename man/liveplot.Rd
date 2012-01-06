@@ -1,6 +1,6 @@
 \name{liveplot}
 \alias{liveplot}
-\title{The following function is described on http://opencpu.org/2011/08/embedding-a-plot-in-your-website/.}
+\title{Plot live stock data.}
 \usage{
   liveplot(ticker)
 }

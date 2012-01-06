@@ -1,4 +1,7 @@
+#' Plot live stock data.
+#' 
 #' The following function is described on http://opencpu.org/2011/08/embedding-a-plot-in-your-website/.
+#' 
 #' @param ticker a ticker name for a plot. For example "GOOG" or "YHOO"
 #' @return returns NULL and prints a plot
 #' @export

@@ -11,8 +11,7 @@ nameEx("liveplot")
 flush(stderr()); flush(stdout())
 
 ### Name: liveplot
-### Title: The following function is described on
-###   http://opencpu.org/2011/08/embedding-a-plot-in-your-website/.
+### Title: Plot live stock data.
 ### Aliases: liveplot
 
 ### ** Examples
@@ -57,8 +56,7 @@ nameEx("testplothandlers")
 flush(stderr()); flush(stdout())
 
 ### Name: testplothandlers
-### Title: The purpose of this function is to test if opencpu is correctly
-###   capturing different types of plots.
+### Title: Test opencpu plotting
 ### Aliases: testplothandlers
 
 ### ** Examples

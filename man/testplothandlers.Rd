@@ -1,6 +1,6 @@
 \name{testplothandlers}
 \alias{testplothandlers}
-\title{The purpose of this function is to test if opencpu is correctly capturing different types of plots.}
+\title{Test opencpu plotting}
 \usage{
   testplothandlers()
 }

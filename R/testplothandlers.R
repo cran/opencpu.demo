@@ -1,3 +1,5 @@
+#' Test opencpu plotting
+#'
 #' The purpose of this function is to test if opencpu is correctly capturing different types of plots.
 #' @return should return NULL and exactly 6 plots.
 #' @export
