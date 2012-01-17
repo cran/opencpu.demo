@@ -16,4 +16,7 @@ testplothandlers(); #should generate six plots
 # Equivalent to:
 # http://beta1.opencpu.org/R/call/opencpu.demo/testplothandlers/save
 }
+\author{
+  Jeroen Ooms
+}
 

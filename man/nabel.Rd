@@ -12,7 +12,8 @@
   \item{pollutant}{pollutant or meteorological variable to
   plot}
 
-  \item{stations}{measurement stations to include}
+  \item{stations}{measurement stations (either by number or
+  name) to include}
 
   \item{interval}{plot \code{hourly} or \code{daily} means}
 
@@ -77,13 +78,14 @@
 \examples{
 ## plot daily mean NO2 concentrations at three stations
 ## from 1 January 2011 up to today
-library(opencpu.demo);
+\dontrun{
 nabel("no2",
-      c("Bern", "Basel", "Zürich"),
+      c("Bern", "Basel", "Lausanne"),
       "daily",
       "free",
       "2011-01-01",
       Sys.Date())
+}
 }
 \author{
   Thomas Zumbrunn (\url{http://thomas.zumbrunn.name/})

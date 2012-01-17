@@ -30,7 +30,7 @@ $(function() {
 	// this function calls the 'nabel' function from the 'opencpu.demo' package
 	var callPlot = function(){
 		var pollutant = $("#pollutant").val();
-		var stations = $(".station:checked").map(function () {return this.id;}).get();
+		var stations = $(".station:checked").map(function () {return parseInt(this.id);}).get();
 		var interval = $("#interval").val();
 		var period = $("#period").val();
 		
@@ -46,7 +46,7 @@ $(function() {
 		$.ajax({
 			url: "/R/call/opencpu.demo/nabel/save",
 			dataType: "json",
-			timeout: 20*1000,
+			timeout: 60*1000,
 			data: {
 				pollutant : JSON.stringify(pollutant),
 				stations : JSON.stringify(stations),

@@ -57,7 +57,7 @@
 #'
 #' @usage nabel(pollutant, stations, interval, period, from, to)
 #' @param pollutant pollutant or meteorological variable to plot
-#' @param stations measurement stations to include
+#' @param stations measurement stations (either by number or name) to include
 #' @param interval plot \code{hourly} or \code{daily} means
 #' @param period time series period
 #' @param from start day of time series period (if \code{period = "free"})
@@ -71,31 +71,21 @@
 #' @examples
 #' ## plot daily mean NO2 concentrations at three stations
 #' ## from 1 January 2011 up to today
-#' library(opencpu.demo);
+#' \dontrun{
 #' nabel("no2",
-#'       c("Bern", "Basel", "Zürich"),
+#'       c("Bern", "Basel", "Lausanne"),
 #'       "daily",
 #'       "free",
 #'       "2011-01-01",
 #'       Sys.Date())
+#' }
 nabel <- function(pollutant = c("o3", "no2", "so2", "co", "nmvoc", "pm10", "pm1", "cpc", "temp", "prec", "rad"),
-		stations = c("Bern-Bollwerk", "Lausanne-César-Roux", "Lugano-Università", "Zürich-Kaserne", "Basel-Binningen", "Dübendorf-Empa", "Härkingen-A1", "Sion-Aéroport-A9", "Magadino-Cadenazzo", "Payerne", "Tänikon", "Lägeren", "Chaumont", "Rigi-Seebodenalp", "Davos-Seehornwald", "Jungfraujoch"),
+		stations = 1:16,
 		interval = c("hourly", "daily"),
 		period = c("day", "week", "month", "free"),
 		from = NULL,
 		to = NULL) {
-	
-	## read arguments
-	## (no thorough checking is done)
-	pollutant <- match.arg(pollutant)
-	stations <- match.arg(stations, several.ok = TRUE)
-	interval <- match.arg(interval)
-	period <- match.arg(period)
-	if (period == "free") {
-		from <- format(as.Date(from), "%d.%m.%Y")
-		to <- format(as.Date(to), "%d.%m.%Y")
-	}
-	
+
 	## map parameters to HTML form parameters
 	## (some of the actual HTML form parameters are the positions
 	## of the terms in the following vector/lists)
@@ -111,17 +101,17 @@ nabel <- function(pollutant = c("o3", "no2", "so2", "co", "nmvoc", "pm10", "pm1"
 			"prec" = "Precipitation (PREC)",
 			"rad" = "Global radiation (RAD)")
 	stationsliste <- c("Bern-Bollwerk",
-			"Lausanne-César-Roux",
-			"Lugano-Università",
-			"Zürich-Kaserne",
+			"Lausanne-C\u00E9sar-Roux",
+			"Lugano-Universit\u00E0",
+			"Z\u00FCrich-Kaserne",
 			"Basel-Binningen",
-			"Dübendorf-Empa",
-			"Härkingen-A1",
-			"Sion-Aéroport-A9",
+			"D\u00FCbendorf-Empa",
+			"H\u00E4rkingen-A1",
+			"Sion-A\u00E9roport-A9",
 			"Magadino-Cadenazzo",
 			"Payerne",
-			"Tänikon",
-			"Lägeren",
+			"T\u00E4nikon",
+			"L\u00E4geren",
 			"Chaumont",
 			"Rigi-Seebodenalp",
 			"Davos-Seehornwald",
@@ -131,7 +121,24 @@ nabel <- function(pollutant = c("o3", "no2", "so2", "co", "nmvoc", "pm10", "pm1"
 	zeitraum <- list("day" = "1tag",
 			"week" = "1woche",
 			"month" = "1monat",
-			"free" = "frei")
+			"free" = "frei")	
+	
+	if(is.numeric(stations)){
+		stations <- stationsliste[stations];
+	} else {
+		stations <- match.arg(stations, stationsliste, several.ok = TRUE);	
+	}
+	
+	## read arguments
+	## (no thorough checking is done)
+	pollutant <- match.arg(pollutant)
+	interval <- match.arg(interval)
+	period <- match.arg(period)
+	if (period == "free") {
+		from <- format(as.Date(from), "%d.%m.%Y")
+		to <- format(as.Date(to), "%d.%m.%Y")
+	}
+	
 	
 	## get CSV file with HTTP POST
 	params <- c("abfrageflag" = "true",
@@ -195,7 +202,7 @@ nabel <- function(pollutant = c("o3", "no2", "so2", "co", "nmvoc", "pm10", "pm1"
 			"pm1" = expression(paste("Particulate matter (PM1, in ", mu, "g/m", {}^3, ")")),
 			"cpc" = expression(paste("Particulate number concentration (CPC, in 1/cm", {}^3), ")"),
 			"nmvoc" = "Non-methane volatile organic compounds (NMVOC, in ppm)",
-			"temp" = "Temperature (TEMP, in °C)",
+			"temp" = "Temperature (TEMP, in \302\260C)",
 			"prec" = "Precipitation (PREC, in mm)",
 			"rad" = expression(paste("Global radiation (RAD, in W/m", {}^2, ")")))  
 	pl <- lattice::xyplot(measurement ~ datetime, dat, groups = station,

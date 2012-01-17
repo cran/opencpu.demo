@@ -2,6 +2,7 @@
 #'
 #' The purpose of this function is to test if opencpu is correctly capturing different types of plots.
 #' @return should return NULL and exactly 6 plots.
+#' @author Jeroen Ooms
 #' @export
 #' @examples testplothandlers(); #should generate six plots
 #' # Equivalent to:
@@ -9,18 +10,18 @@
 
 testplothandlers <- function(){
 	#this function should print exactly 6 plots
-	library(lattice);
-	library(ggplot2);
 	
 	#two regular plots
 	print(plot(cars));
 	print(plot(iris));
 	
 	#two ggplots
+	library(ggplot2);
 	print(qplot(x=speed, y=dist,data=cars));
 	print(qplot(x=speed, y=dist,data=cars, geom="smooth"));	
 	
 	#simple lattice plot
+	library(lattice);	
 	print(histogram(cars$speed));
 	
 	#complicated lattice plot (form manual)

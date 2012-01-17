@@ -16,11 +16,16 @@
   http://opencpu.org/2011/08/embedding-a-plot-in-your-website/.
 }
 \examples{
-liveplot("GOOG")
+\dontrun{
+  liveplot("GOOG")
 # Is equivalent to e.g:
 # http://beta1.opencpu.org/R/call/opencpu.demo/liveplot/png?ticker="GOOG"
 # http://beta1.opencpu.org/R/call/opencpu.demo/liveplot/pdf?ticker="GOOG"
 # http://beta1.opencpu.org/R/call/opencpu.demo/liveplot/png?ticker="YHOO"
 # http://beta1.opencpu.org/R/call/opencpu.demo/liveplot/png?ticker="YHOO"&!width=1000&!height=800
+}
+}
+\author{
+  Jeroen Ooms
 }
 

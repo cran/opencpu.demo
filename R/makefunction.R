@@ -4,7 +4,7 @@
 #' 
 #' @param myfun a function
 #' @return the same function
-#' @author jeroen
+#' @author Jeroen Ooms
 #' @export
 makefunction <- function(myfun){
 

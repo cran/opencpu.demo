@@ -15,6 +15,6 @@
   function, and remove any custom environment.
 }
 \author{
-  jeroen
+  Jeroen Ooms
 }
 
