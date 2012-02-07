@@ -6,7 +6,11 @@
   \url{http://www.bafu.admin.ch/luft/luftbelastung/blick_zurueck/datenabfrage/index.html?lang=en}
 }
 \usage{
-  nabel(pollutant, stations, interval, period, from, to)
+  nabel(pollutant = c("o3", "no2", "so2", "co", "nmvoc", "pm10", "pm1", "cpc", "temp", "prec", "rad"),
+    stations = c("Bern-Bollwerk", "Lausanne-César-Roux", "Lugano-Università", "Zürich-Kaserne", "Basel-Binningen", "Dübendorf-Empa", "Härkingen-A1", "Sion-Aéroport-A9", "Magadino-Cadenazzo", "Payerne", "Tänikon", "Lägeren", "Chaumont", "Rigi-Seebodenalp", "Davos-Seehornwald", "Jungfraujoch"),
+    interval = c("hourly", "daily"),
+    period = c("day", "week", "month", "free"),
+    from = NULL, to = NULL)
 }
 \arguments{
   \item{pollutant}{pollutant or meteorological variable to

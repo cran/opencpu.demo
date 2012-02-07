@@ -1,16 +1,18 @@
 /* 
  * App by Jeroen Ooms for the 'Nabel' function by Thomas Zumbrunn.
+ * www.opencpu.org
  * Released under AGPL according to OpenCPU conditions.
  */
 
 $(function() {
 
+	var hashkey;
+
 	// this function pulls the plot that we created and displays a PNG image. 
 	var renderPlot = function(){
 		var width = $("#plotdiv").width() - 5;
 		var height = $("#plotdiv").height() - 20;
-		var hashkey = document.hashkey
-		if(document.hashkey){
+		if(hashkey){
 			$("#plotimg").attr("src","spinner.gif");
 			setTimeout(function(){ 
 				$("#plotimg").attr("src", "/R/store" + hashkey + "/png?!width=" + width + "&!height=" + height);
@@ -20,7 +22,6 @@ $(function() {
 	
 	//this function does the same for PDF.
 	var getpdf = function(){
-		var hashkey = document.hashkey;
 		if(hashkey){
 			window.open("/R/store" + hashkey + "/pdf");
 		}
@@ -54,7 +55,7 @@ $(function() {
 				period : JSON.stringify(period)				
 			}, 
 			success: function(data){
-				document.hashkey = data.graphs[0];
+				hashkey = data.graphs[0];
 				renderPlot();
 			},
 			error: function(xhr, textStatus, errorThrown) {
@@ -71,9 +72,10 @@ $(function() {
 		minHeight: 240,
 		maxHeight: 800
 	}).bind( "resizestart", function() {
-		$("#plotimg").attr("src", "");
+		$("#plotimg").hide();
 	}).bind( "resizestop", function(event, ui) {
 		renderPlot();
+		$("#plotimg").show();		
 	});
 	
 	            
@@ -81,9 +83,7 @@ $(function() {
 	
 	$("#plotbutton").button({icons: {primary: "ui-icon-image"}}).click(callPlot);
 	$("#pdfbutton").button({icons: {primary: "ui-icon-document"}}).click(getpdf);
-	$("#pollutant").selectmenu();
-	$("#period").selectmenu();
-	$("#interval").selectmenu();
+	$("select").selectmenu();
 	$(document).ready(callPlot);
 	
 });
