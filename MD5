@@ -1,7 +1,8 @@
-7eed3593f67e4b0257ce43fe0fa11ece *DESCRIPTION
-fe5bea64cd09f95498ad5337a7bb832c *NAMESPACE
+973dc8689ab8dc636aa616ff65f798a4 *DESCRIPTION
+910fd8f7852292a2ef198772a2656985 *NAMESPACE
 1f1d9ac7199cf9a9292704b50f175767 *R/Rollcorr.R
-8248ae1d0491da4135c0c29730e1190c *R/install.verbose.R
+a8571724285ef2a0e58185bcc5d0e54e *R/gitstats.R
+f068fe0f7b11e855b119ee239d83536b *R/install.verbose.R
 6f141951e0afdd716ec16f1f0205de27 *R/liveplot.R
 5182ef49ed3e9cadf6b1ab38d087c9fd *R/makefunction.R
 3429b293565f624c89ec1a8e24bc90e9 *R/nabel.R
@@ -17,8 +18,8 @@ a09e0f9a4cc78ecf14ba268cf87e621f *README
 d2275fd803e28602c49d1361757cf12e *inst/opencpu/apps/storefunction/index.html
 bb69dfa97b08a7e3f3e3eddc6a65026d *inst/opencpu/apps/uploadfile/index.html
 0cfc36eb99e3d28fc94270bc06d3b03f *man/Rollcorr.Rd
+4d0dcbbde20d6b00c48fd90915fd3fe6 *man/gitstats.Rd
 93fb20b495a98e287f1ecc0853123fce *man/liveplot.Rd
 ee6e4ac18c47bcf704751d9efa92087d *man/makefunction.Rd
 ba1df2476149d92e6bee17e81f92a296 *man/nabel.Rd
 29029df0a127d9cbe2caa2e0caa2aaea *man/testplothandlers.Rd
-104a664f08bf8f890654846be71dea48 *opencpu.demo-Ex.R
