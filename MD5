@@ -1,7 +1,8 @@
-973dc8689ab8dc636aa616ff65f798a4 *DESCRIPTION
-910fd8f7852292a2ef198772a2656985 *NAMESPACE
+df0f45367d2b5b041564d5ff39139d2f *DESCRIPTION
+fdf8f2f7895d7b29fc4b2bd9fdd30fc7 *NAMESPACE
 1f1d9ac7199cf9a9292704b50f175767 *R/Rollcorr.R
-a8571724285ef2a0e58185bcc5d0e54e *R/gitstats.R
+e0d265c39dddea855decaaf43261b6dc *R/altmetrics.R
+e403a9d944f8549f84b6b7b1921687be *R/gitstats.R
 f068fe0f7b11e855b119ee239d83536b *R/install.verbose.R
 6f141951e0afdd716ec16f1f0205de27 *R/liveplot.R
 5182ef49ed3e9cadf6b1ab38d087c9fd *R/makefunction.R
@@ -18,6 +19,9 @@ a09e0f9a4cc78ecf14ba268cf87e621f *README
 d2275fd803e28602c49d1361757cf12e *inst/opencpu/apps/storefunction/index.html
 bb69dfa97b08a7e3f3e3eddc6a65026d *inst/opencpu/apps/uploadfile/index.html
 0cfc36eb99e3d28fc94270bc06d3b03f *man/Rollcorr.Rd
+6b834e224f8de1b0e22ad4b9fbc785e3 *man/altmetrics.Rd
+70da33b8e121bfda3f205cfe3c8c9f3b *man/digg_user.Rd
+0719254d9d5f778adebaefd93249600d *man/git_wf.Rd
 4d0dcbbde20d6b00c48fd90915fd3fe6 *man/gitstats.Rd
 93fb20b495a98e287f1ecc0853123fce *man/liveplot.Rd
 ee6e4ac18c47bcf704751d9efa92087d *man/makefunction.Rd
